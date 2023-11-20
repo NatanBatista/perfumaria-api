@@ -17,7 +17,6 @@ group :development, :test do
 end
 
 group :development do
-  gem 'sqlite3', '~> 1.4'
   gem 'listen', '~> 3.3'
   gem 'spring'
   gem "letter_opener", "~> 1.8"
@@ -25,3 +24,4 @@ end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "devise_token_auth", "~> 1.2"
+gem "pg", "~> 1.5"
