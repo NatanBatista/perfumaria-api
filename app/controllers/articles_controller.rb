@@ -9,7 +9,7 @@ class ArticlesController < ApplicationController
   end
 
   def homeFeed
-    @articles = Article.all.limit(3)
+    @articles = Article.all.limit(10)
 
     render json: @articles
   end
