@@ -80,6 +80,10 @@ GEM
       bcrypt (~> 3.0)
       devise (> 3.5.2, < 5)
       rails (>= 4.2.0, < 7.1)
+    dotenv (3.1.0)
+    dotenv-rails (3.1.0)
+      dotenv (= 3.1.0)
+      railties (>= 6.1)
     erubi (1.12.0)
     ffi (1.16.3)
     globalid (1.2.1)
@@ -196,6 +200,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   devise_token_auth (~> 1.2)
+  dotenv-rails
   image_processing (~> 1.2)
   letter_opener (~> 1.8)
   listen (~> 3.3)
