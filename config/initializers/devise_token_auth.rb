@@ -63,8 +63,19 @@ DeviseTokenAuth.setup do |config|
   # devise confirmable module. If you want to use devise confirmable module and
   # send email, set it to true. (This is a setting for compatibility)
   config.send_confirmation_email = true
-  config.default_confirm_success_url = 'http://localhost:3000/'
-  config.default_password_reset_url = 'http://localhost:3000/alterar-senha'
+
+
+  config.default_confirm_success_url = if Rails.env.production?
+    'https://perfumaria-next-7p5n0stqm-natanbatistas-projects.vercel.app/auth/signin'
+  else
+    ' '
+  end
+
+  config.default_password_reset_url = if Rails.env.production?
+    'https://perfumaria-next-7p5n0stqm-natanbatistas-projects.vercel.app/auth/reset-password'
+  else
+    'localhost:3000/reset-password'
+  end
 
   config.remove_tokens_after_password_reset = true
 end
