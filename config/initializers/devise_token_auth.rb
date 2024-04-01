@@ -66,15 +66,15 @@ DeviseTokenAuth.setup do |config|
 
 
   config.default_confirm_success_url = if Rails.env.production?
-    'https://perfumaria-next.vercel.app//auth/signin'
+    'https://perfumaria-next.vercel.app/auth/signin'
   else
-    ' '
+    'http://localhost:3000/auth/signin'
   end
 
   config.default_password_reset_url = if Rails.env.production?
-    'https://perfumaria-next.vercel.app//auth/reset-password'
+    'https://perfumaria-next.vercel.app/auth/reset-password'
   else
-    'localhost:3000/reset-password'
+    'http://localhost:3000/auth/reset-password'
   end
 
   config.remove_tokens_after_password_reset = true
